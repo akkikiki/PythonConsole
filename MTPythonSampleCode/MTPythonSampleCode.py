@@ -8,6 +8,7 @@ import requests
 
 doItAgain = "yes"
 
+
 def GetTextAndTranslate(finalToken):
 
     fromLangCode = " "
@@ -84,8 +85,9 @@ def GetTextAndTranslate(finalToken):
 
 
 if __name__ == "__main__":
+    client_secret = open("client_secret.txt").readline().strip()
 
-    client_secret = 'ENTER_YOUR_CLIENT_SECRET'
+    #client_secret = 'ENTER_YOUR_CLIENT_SECRET'
     auth_client = AzureAuthClient(client_secret)
     bearer_token = 'Bearer ' + auth_client.get_access_token()
 
